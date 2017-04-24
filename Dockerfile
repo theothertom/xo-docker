@@ -22,5 +22,4 @@ RUN git clone -b next-release http://github.com/vatesfr/xo-web
 
 RUN cd xo-server; yarn && yarn run build
 RUN cd xo-web; yarn && yarn run build
-RUN cd xo-server; cp sample.config.yaml .xo-server.yaml
-RUN echo "  mounts: '/': '../xo-web/dist/'" >> xo-server/.xo-server.yaml
+COPY xo-server.yaml /xo-server/.xo-server.yaml
