@@ -1,7 +1,7 @@
 FROM debian:jessie
 MAINTAINER Tom Grace <tom@deathybycomputers.co.uk>
 
-RUN apt-get update; apt-get install -y curl build-essential redis-server libpng-dev git python-minimal apt-transport-https
+RUN apt-get update; apt-get dist-upgrade -y; apt-get install -y curl build-essential redis-server libpng-dev git python-minimal apt-transport-https
 
 #Install "n"
 RUN curl -o /usr/local/bin/n https://raw.githubusercontent.com/visionmedia/n/master/bin/n
