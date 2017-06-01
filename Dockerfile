@@ -1,4 +1,4 @@
-FROM debian:jessie
+FROM debian:sid
 MAINTAINER Tom Grace <tom@deathybycomputers.co.uk>
 
 RUN apt-get update; apt-get dist-upgrade -y; apt-get install -y curl build-essential redis-server libpng-dev git python-minimal apt-transport-https
